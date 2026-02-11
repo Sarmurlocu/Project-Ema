@@ -4,7 +4,7 @@ import os
 
 # 1. 安全攔截邏輯 (VCP 過濾器)
 def safety_filter(user_input):
-    danger_zone = ["想不開", "絕望", "沒意義", "終結"]
+    danger_zone = ["想不開", "絕望", "沒意義", "終結", "自殺",  "痛苦",   "死"]
     if any(word in user_input for word in danger_zone):
         return True
     return False
@@ -36,12 +36,12 @@ if __name__ == "__main__":
     
     # 使用者互動
     print("【Sarumurloc 靈魂導引系統】")
-    user_feeling = input("在尋求導引前，請簡述您現在的心情或困擾：")
+    user_feeling = input("在尋求導引前，請盡可能說明你現在的困擾或心情以及詢問事項：")
 
     # 執行過濾邏輯
     if safety_filter(user_feeling):
         print("\n【Sarumurloc 溫馨提醒】")
         print("當風暴過大時，我們不急著尋找方向，先讓心靈在雨露中稍作休息。")
-        print("現在的您需要的不是籤詩的指引，而是給自己一個擁抱。建議找信任的朋友聊聊。")
+        print("現在的你需要的不是籤詩的指引，而是一個穩暖的擁抱，建議找信任的朋友聊聊。")
     else:
         draw_poem(json_path)

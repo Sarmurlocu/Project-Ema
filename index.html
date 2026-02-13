@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Project-Ema | 靈魂導引系統</title>
+    <style>
+        body { background-color: #f4f1ea; font-family: "Microsoft JhengHei", serif; display: flex; justify-content: center; padding: 50px; }
+        .container { max-width: 600px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #5d5d5d; text-align: center; }
+        .input-group { margin: 20px 0; }
+        textarea { width: 100%; height: 100px; border: 1px solid #ddd; border-radius: 8px; padding: 10px; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #8b4513; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #a0522d; }
+        #result { margin-top: 30px; display: none; border-top: 2px dashed #eee; padding-top: 20px; }
+        .poem-box { background: #fffcf5; border-left: 5px solid #8b4513; padding: 15px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Project-Ema</h1>
+    <p style="text-align:center; color: #888;">在風暴中，尋找心靈的雨露</p>
+
+    <div class="input-group">
+        <textarea id="userInput" placeholder="請簡述您現在的心情或困擾..."></textarea>
+    </div>
+    
+    <button onclick="drawPoem()">尋求導引</button>
+
+    <div id="result">
+        <div class="poem-box">
+            <h3 id="poemID"></h3>
+            <p id="poemText" style="font-size: 1.2em; font-weight: bold;"></p>
+        </div>
+        <p><strong>智慧導引：</strong><br><span id="interpretation"></span></p>
+        <p style="color: #b22222;"><strong>風險提示 (Risk)：</strong><br><span id="risk"></span></p>
+        <p style="color: #2e8b57;"><strong>內在價值 (VCP)：</strong><br><span id="vcp"></span></p>
+    </div>
+</div>
+
+<script>
+    function drawPoem() {
+        // 這裡之後會連接你的 Python 邏輯或直接讀取 JSON
+        alert("連結成功！網頁偵測到了您的點擊。");
+    }
+</script>
+
+</body>
+</html>
